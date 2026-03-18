@@ -1,3 +1,12 @@
+export type Language = 'en' | 'fr' | 'es' | 'it' | 'ar';
+
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
 export interface Review {
   id: string;
   author: string;
@@ -7,27 +16,42 @@ export interface Review {
   authorReviewsCount: number;
   authorPhotosCount?: number;
   response?: string;
-  avatar?: string;
+  avatar: string;
 }
 
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
+export interface ClinicHour {
+  day: string;
+  time: string;
+  isOpen: boolean;
 }
 
-export interface ClinicInfo {
-  name: string;
-  rating: number;
-  reviewCount: number;
-  category: string;
+export interface Translation {
+  bookNow: string;
+  overview: string;
+  reviews: string;
+  about: string;
+  directions: string;
+  elevate: string;
+  naturalBeauty: string;
+  heroDesc: string;
+  explore: string;
+  viewGallery: string;
+  nextAvailable: string;
+  tomorrow: string;
+  quickBook: string;
+  openNow: string;
+  closes: string;
+  theClinic: string;
+  patientStories: string;
+  visitUs: string;
   address: string;
+  hours: string;
   phone: string;
-  whatsapp: string;
-  hours: {
-    day: string;
-    time: string;
-    isOpen?: boolean;
-  }[];
+  whatsappUs: string;
+  bookAppointment: string;
+  womenOwned: string;
+  save: string;
+  nearby: string;
+  sendToPhone: string;
+  share: string;
 }
